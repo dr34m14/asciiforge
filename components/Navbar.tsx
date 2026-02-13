@@ -15,10 +15,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme, onHomeClick })
         <div className="flex justify-between items-center h-16">
           <button 
             onClick={onHomeClick}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none group"
             title="Go to Home"
           >
-            <div className="bg-indigo-600 p-1.5 rounded-lg">
+            <div className="bg-indigo-600 p-1.5 rounded-lg group-hover:scale-110 transition-transform">
               <Terminal size={20} className="text-white" />
             </div>
             <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-indigo-300 dark:from-indigo-600 dark:to-indigo-400">
@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme, onHomeClick })
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 text-zinc-400 hover:text-indigo-500 dark:text-zinc-600 dark:hover:text-indigo-600 transition-colors"
-              title="GitHub Profile"
+              title="dr34m14 GitHub"
             >
               <Github size={20} />
             </a>

@@ -1,14 +1,22 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    
+    
     <meta name="google-adsense-account" content="ca-pub-2991222523385043">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2991222523385043"
      crossorigin="anonymous"></script>
      <meta name="google-site-verification" content="_sKlch-lbFMFXJZAtZyg0zHVsMz0nXB9pv1Zfaw-oZI" />
+    
+    
+    
     <title>ASCIIForge | Free Image to ASCII Generator</title>
+    <meta name="description" content="Convert any image to beautiful ASCII art instantly. Free, private, and client-side processing. Perfect for GitHub profile banners and terminal art.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +39,7 @@
         background-color: var(--bg-color);
         color: var(--text-color);
         transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-x: hidden;
       }
 
       .font-mono {
@@ -38,12 +47,12 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
+        from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
       .animate-fade-in {
-        animation: fadeIn 0.6s ease-out forwards;
+        animation: fadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
       }
 
       .stagger-1 { animation-delay: 0.1s; }
@@ -51,15 +60,16 @@
       .stagger-3 { animation-delay: 0.3s; }
 
       ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
       }
       ::-webkit-scrollbar-track {
         background: transparent;
       }
       ::-webkit-scrollbar-thumb {
         background: var(--border-color);
-        border-radius: 4px;
+        border-radius: 10px;
+        border: 2px solid var(--bg-color);
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #3f3f46;
@@ -74,7 +84,12 @@
       .drop-zone-active {
         border-color: #6366f1 !important;
         background-color: rgba(99, 102, 241, 0.1) !important;
-        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+      }
+      
+      .prose h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
       }
     </style>
   <script type="importmap">
