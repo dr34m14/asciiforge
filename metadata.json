@@ -1,0 +1,7 @@
+{
+  "name": "ASCIIForge",
+  "description": "The fastest, cleanest image-to-ASCII art generator built for creators and developers. Free, private, and client-side processing.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
