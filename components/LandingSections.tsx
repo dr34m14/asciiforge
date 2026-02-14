@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Zap, 
@@ -87,7 +86,7 @@ export const UseCases: React.FC = () => {
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-6 group">
                   <div className="mt-1 shrink-0 bg-zinc-900 dark:bg-white p-3 rounded-2xl border border-zinc-800 dark:border-zinc-200 group-hover:border-indigo-500/50 transition-colors">
-                    {React.cloneElement(item.icon as React.ReactElement, { className: 'text-indigo-500', size: 24 })}
+                    {React.cloneElement(item.icon as React.ReactElement<any>, { className: 'text-indigo-500', size: 24 })}
                   </div>
                   <div>
                     <h4 className="font-black text-xl mb-2 dark:text-zinc-900">{item.title}</h4>
@@ -159,7 +158,7 @@ export const FAQ: React.FC = () => {
 };
 
 interface FooterProps {
-  onPageClick: (page: string) => void;
+  onPageClick: (page: any) => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onPageClick }) => {
@@ -168,11 +167,15 @@ export const Footer: React.FC<FooterProps> = ({ onPageClick }) => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
           <div className="md:col-span-6">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="bg-indigo-600 p-2 rounded-xl">
-                <Terminal size={24} className="text-white" />
-              </div>
-              <span className="text-3xl font-black dark:text-zinc-900">ASCIIForge</span>
+            <div className="flex items-center gap-3 mb-8 h-10">
+              <img 
+                src="/favicon.png" 
+                alt="ASCIIForge Logo" 
+                className="h-full w-auto object-contain rounded-lg"
+              />
+              <span className="text-xl font-black tracking-tighter dark:text-zinc-900 text-white uppercase">
+                ASCIIForge
+              </span>
             </div>
             <p className="text-zinc-400 dark:text-zinc-600 max-w-md mb-10 text-lg leading-relaxed">
               We're on a mission to bring classic ASCII aesthetics to the modern web. Built with 100% privacy and developer happiness in mind.

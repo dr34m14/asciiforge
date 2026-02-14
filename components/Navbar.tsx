@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Terminal, Github, Heart, Sun, Moon } from 'lucide-react';
+import { Github, Heart, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   isDarkMode: boolean;
@@ -15,13 +14,15 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme, onHomeClick })
         <div className="flex justify-between items-center h-16">
           <button 
             onClick={onHomeClick}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none group"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity focus:outline-none group"
             title="Go to Home"
           >
-            <div className="bg-indigo-600 p-1.5 rounded-lg group-hover:scale-110 transition-transform">
-              <Terminal size={20} className="text-white" />
-            </div>
-            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-indigo-300 dark:from-indigo-600 dark:to-indigo-400">
+            <img 
+              src="/favicon.png" 
+              alt="ASCIIForge Logo" 
+              className="h-9 w-auto object-contain rounded-lg"
+            />
+            <span className="text-xl font-black tracking-tighter dark:text-zinc-900 text-white uppercase transition-colors">
               ASCIIForge
             </span>
           </button>
